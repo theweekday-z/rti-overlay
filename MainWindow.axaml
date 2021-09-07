@@ -1,0 +1,80 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="900"
+        d:DesignHeight="530"
+        Width="900"
+        Height="530"
+        WindowStartupLocation="CenterScreen"
+        ExtendClientAreaToDecorationsHint="True"
+        BorderThickness="0"
+        TransparencyLevelHint="AcrylicBlur"
+        x:Class="RTI_CrossPlatformWTRTIInterface.MainWindow"
+        Title="Real-Time Information OSD">
+  <Panel>
+    <ExperimentalAcrylicBorder IsHitTestVisible="False">
+      <ExperimentalAcrylicBorder.Material>
+        <ExperimentalAcrylicMaterial
+            BackgroundSource="Digger"
+            TintColor="Black"
+            TintOpacity="-1"
+            MaterialOpacity="0.45"/>
+      </ExperimentalAcrylicBorder.Material>
+    </ExperimentalAcrylicBorder>
+    <Panel Margin="0" Focusable="True">
+      <TextBlock Text="RTI Overview" FontFamily="Segoe UI Light" Margin="20,10,0,0" FontSize="32" Foreground="White"/>
+      <TextBlock Text="Flight Characteristics" Foreground="White" FontWeight="UltraLight" FontSize="20" FontFamily="Segoe UI Light" Margin="25,80,0,0"/>
+      <StackPanel Margin="30,115,0,0" x:Name="VarColumn1">
+        <CheckBox Content="AoA" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Climb" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Altitude" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Load Factor" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="True Airspeed" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Radar Altitude" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Indicated Airspeed" Foreground="WhiteSmoke" FontWeight="Light"/>
+      </StackPanel>
+      <TextBlock Text="Auxillary Characteristics" Foreground="White" FontWeight="UltraLight" FontSize="20" FontFamily="Segoe UI Light" Margin="300,80,0,0"/>
+      <StackPanel Margin="310,115,0,0">
+        <CheckBox Content="RPM" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Gear" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Flaps" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Rudder" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Mixture" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Ailerons" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Elevator" Foreground="WhiteSmoke" FontWeight="Light"/>
+      </StackPanel>
+      <StackPanel Margin="470,115,0,0">
+        <CheckBox Content="Radiator" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Airbrakes" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Oil Radiator" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Engine Power" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Engine Thrust" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Remaining WEP" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Remaining Boost" Foreground="WhiteSmoke" FontWeight="Light"/>
+      </StackPanel>
+      <StackPanel Margin="680,115,0,0">
+        <CheckBox Content="Fuel Weight" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Propeller Pitch" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Manifold Pressure" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Fuel Consumption" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Supercharger Gear" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Brake-S Fuel Efficiency" Foreground="WhiteSmoke" FontWeight="Light"/>
+        <CheckBox Content="Thrust-S Fuel Efficiency" Foreground="WhiteSmoke" FontWeight="Light"/>
+      </StackPanel>
+    </Panel>
+    <Separator Background="Black" Height="3" Width="600" Margin="50,180,50,-15"/>
+    <TextBlock Text="Indicators In Row" Foreground="White" FontWeight="UltraLight" FontSize="20" FontFamily="Segoe UI Light" Margin="45,380,0,0"/>
+    <TextBox Margin="770,420,750,80" Width="40"  Watermark="ms"/>
+    <TextBlock Text="Update Interval" Foreground="White" FontWeight="UltraLight" FontSize="20" FontFamily="Segoe UI Light" Margin="705,380,0,0"/>
+    <TextBox Margin="70,420,750,80" Width="40"/>
+    <TextBlock Text="Measurement System" Foreground="White" FontWeight="UltraLight" FontSize="20" FontFamily="Segoe UI Light" Margin="355,380,0,0"/>
+    <StackPanel Margin="400,420,0,0">
+      <ListBox Margin="-40,0,370,0">
+        <ListBoxItem>Metric</ListBoxItem>
+        <ListBoxItem>Imperial</ListBoxItem>
+      </ListBox>
+    </StackPanel>
+  </Panel>
+</Window>
